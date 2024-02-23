@@ -11,6 +11,7 @@
 		CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8092B88A9D900A69084 /* ContentView.swift */; };
 		CAECE80C2B88A9DA00A69084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80B2B88A9DA00A69084 /* Assets.xcassets */; };
 		CAECE80F2B88A9DA00A69084 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80E2B88A9DA00A69084 /* Preview Assets.xcassets */; };
+		CAECE8172B88AD0800A69084 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8162B88AD0800A69084 /* RestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		CAECE80B2B88A9DA00A69084 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CAECE80E2B88A9DA00A69084 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAECE8102B88A9DA00A69084 /* restclient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = restclient.entitlements; sourceTree = "<group>"; };
+		CAECE8162B88AD0800A69084 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				CAECE80B2B88A9DA00A69084 /* Assets.xcassets */,
 				CAECE8102B88A9DA00A69084 /* restclient.entitlements */,
 				CAECE80D2B88A9DA00A69084 /* Preview Content */,
+				CAECE8162B88AD0800A69084 /* RestClient.swift */,
 			);
 			path = restclient;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */,
+				CAECE8172B88AD0800A69084 /* RestClient.swift in Sources */,
 				CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

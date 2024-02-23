@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var url = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationSplitView {
+            List {
+                Text("Item 2")
+            }
+        } detail: {
+            VStack {
+                HStack {
+                    TextField("URL", text: $url)
+                    Button("Send") {
+                        sendRequest(urlRaw: url)
+                    }
+                }
+                Image(systemName: "globe")
+                    .imageScale(.large)
+                    .foregroundStyle(.tint)
+                Text("Hello, world!")
+            }
+            .padding()
         }
-        .padding()
+
     }
 }
 
