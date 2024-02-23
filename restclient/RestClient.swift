@@ -12,7 +12,7 @@ func sendRequest(urlRaw: String) {
         // TODO: display message in UI if URL is invalid
         fatalError("Invalid URL")
     }
-    
+
     var urlRequest = URLRequest(url: url)
     urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
     urlRequest.httpMethod = "GET"
