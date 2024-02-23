@@ -12,6 +12,8 @@
 		CAECE80C2B88A9DA00A69084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80B2B88A9DA00A69084 /* Assets.xcassets */; };
 		CAECE80F2B88A9DA00A69084 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80E2B88A9DA00A69084 /* Preview Assets.xcassets */; };
 		CAECE8172B88AD0800A69084 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8162B88AD0800A69084 /* RestClient.swift */; };
+		CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8182B88D20C00A69084 /* ResponseView.swift */; };
+		CAECE81C2B88D6BF00A69084 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE81B2B88D6BF00A69084 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		CAECE80E2B88A9DA00A69084 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CAECE8102B88A9DA00A69084 /* restclient.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = restclient.entitlements; sourceTree = "<group>"; };
 		CAECE8162B88AD0800A69084 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		CAECE8182B88D20C00A69084 /* ResponseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseView.swift; sourceTree = "<group>"; };
+		CAECE81B2B88D6BF00A69084 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		CAECE8062B88A9D900A69084 /* restclient */ = {
 			isa = PBXGroup;
 			children = (
+				CAECE81A2B88D6B000A69084 /* Model */,
 				CAECE8072B88A9D900A69084 /* restclientApp.swift */,
 				CAECE8092B88A9D900A69084 /* ContentView.swift */,
 				CAECE80B2B88A9DA00A69084 /* Assets.xcassets */,
 				CAECE8102B88A9DA00A69084 /* restclient.entitlements */,
 				CAECE80D2B88A9DA00A69084 /* Preview Content */,
 				CAECE8162B88AD0800A69084 /* RestClient.swift */,
+				CAECE8182B88D20C00A69084 /* ResponseView.swift */,
 			);
 			path = restclient;
 			sourceTree = "<group>";
@@ -70,6 +76,14 @@
 				CAECE80E2B88A9DA00A69084 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CAECE81A2B88D6B000A69084 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CAECE81B2B88D6BF00A69084 /* Response.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +159,8 @@
 				CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */,
 				CAECE8172B88AD0800A69084 /* RestClient.swift in Sources */,
 				CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */,
+				CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */,
+				CAECE81C2B88D6BF00A69084 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,10 +291,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = restclient/restclient.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"restclient/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -300,10 +318,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = restclient/restclient.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"restclient/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";

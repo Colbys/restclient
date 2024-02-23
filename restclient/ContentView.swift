@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var url = ""
+    @EnvironmentObject var restClient: RestClient
+    
+    @State private var url = "https://example.com"
     
     var body: some View {
         NavigationSplitView {
@@ -16,24 +18,27 @@ struct ContentView: View {
                 Text("Item 2")
             }
         } detail: {
-            VStack {
-                HStack {
-                    TextField("URL", text: $url)
-                    Button("Send") {
-                        sendRequest(urlRaw: url)
+            HStack(
+                alignment: .top
+            ) {
+                VStack {
+                    HStack {
+                        TextField("URL", text: $url)
+                        Button("Send") {
+                            restClient.sendRequest(urlRaw: url)
+                        }
                     }
                 }
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
+                .padding()
+                ResponseView(response: restClient.response)
             }
-            .padding()
         }
+        .navigationTitle("REST Client")
 
     }
 }
 
 #Preview {
     ContentView()
+        .environmentObject(RestClient())
 }
