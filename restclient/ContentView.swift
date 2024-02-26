@@ -12,6 +12,22 @@ struct ContentView: View {
     
     @State private var url = "https://example.com"
     @State private var httpMethod: HTTPMethod = HTTPMethod.GET
+    @State private var headers: [HTTPHeader] = [
+        HTTPHeader(name: "Content-Type", value: "application/json", enabled: true)
+    ]
+    
+    func enabledBinding(header: HTTPHeader) -> Binding<Bool> {
+        return Binding<Bool>(
+            get: {
+                return header.enabled
+            },
+            set: { isEnabled in
+                if let index = headers.firstIndex(where: { $0.id == header.id }) {
+                    headers[index].enabled = isEnabled
+                }
+            }
+        )
+    }
     
     var body: some View {
         NavigationSplitView {
@@ -22,9 +38,13 @@ struct ContentView: View {
             HStack(
                 alignment: .top
             ) {
-                VStack {
+                Table(headers) {
+                    TableColumn("Name", value: \.name)
+                    TableColumn("Value", value: \.value)
+                    TableColumn("Enabled") { header in
+                        Toggle("", isOn: enabledBinding(header: header))
+                    }
                 }
-                .padding()
                 ResponseView(response: restClient.response)
             }
         }

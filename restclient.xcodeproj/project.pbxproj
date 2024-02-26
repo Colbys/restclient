@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */; };
+		CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */; };
 		CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8072B88A9D900A69084 /* restclientApp.swift */; };
 		CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8092B88A9D900A69084 /* ContentView.swift */; };
 		CAECE80C2B88A9DA00A69084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80B2B88A9DA00A69084 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		CAECE8042B88A9D900A69084 /* restclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAECE8072B88A9D900A69084 /* restclientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restclientApp.swift; sourceTree = "<group>"; };
 		CAECE8092B88A9D900A69084 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			children = (
 				CAECE81B2B88D6BF00A69084 /* Response.swift */,
 				CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */,
+				CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */,
 				CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */,
 				CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */,
+				CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */,
 				CAECE81C2B88D6BF00A69084 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

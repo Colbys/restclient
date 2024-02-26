@@ -8,9 +8,9 @@
 import Foundation
 
 struct Response {
-    var statusCode: Int
-    var mimeType: String
-    var body: String
+    let statusCode: Int
+    let mimeType: String
+    let body: String
     
     init(statusCode: Int, mimeType: String, body: String) {
         self.statusCode = statusCode
