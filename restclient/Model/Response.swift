@@ -10,9 +10,11 @@ import Foundation
 struct Response {
     var statusCode: Int
     var mimeType: String
+    var body: String
     
-    init(statusCode: Int, mimeType: String) {
+    init(statusCode: Int, mimeType: String, body: String) {
         self.statusCode = statusCode
         self.mimeType = mimeType
+        self.body = body
     }
 }

@@ -22,18 +22,20 @@ struct ContentView: View {
                 alignment: .top
             ) {
                 VStack {
-                    HStack {
-                        TextField("URL", text: $url)
-                        Button("Send") {
-                            restClient.sendRequest(urlRaw: url)
-                        }
-                    }
                 }
                 .padding()
                 ResponseView(response: restClient.response)
             }
         }
-        .navigationTitle("REST Client")
+        .toolbar {
+            ToolbarItemGroup(placement: .status) {
+                TextField("URL", text: $url)
+                Button("Send") {
+                    restClient.sendRequest(urlRaw: url)
+                }
+            }
+        }
+        .navigationTitle("")
 
     }
 }

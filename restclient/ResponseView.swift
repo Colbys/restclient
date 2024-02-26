@@ -15,17 +15,20 @@ struct ResponseView: View {
         VStack(
             alignment: .leading
         ) {
-            HStack(
-                spacing: 30
-            ) {
+            VStack {
                 if (response != nil) {
-                    Text("\(response?.statusCode ?? 0)")
-                    Text("\(response?.mimeType ?? "")")
+                    HStack(
+                        spacing: 30
+                    ) {
+                        Text("\(response?.statusCode ?? 0)")
+                        Text("\(response?.mimeType ?? "")")
+                    }
+                    Text(response?.body ?? "")
                 } else {
                     Text("No Response")
                 }
+                
             }
-            Text("Hello, World!")
         }
         .padding()
         .frame(minWidth: 100, maxWidth: .infinity)
@@ -33,5 +36,9 @@ struct ResponseView: View {
 }
 
 #Preview {
-    ResponseView(response: Response(statusCode: 200, mimeType: "text/html"))
+    ResponseView(response: Response(
+        statusCode: 200,
+        mimeType: "application/json",
+        body: "{\"\"}"
+    ))
 }

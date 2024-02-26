@@ -27,13 +27,10 @@ class RestClient: ObservableObject {
             guard let httpResponse = r as? HTTPURLResponse else { return }
             
             DispatchQueue.main.async {
-                self.response = Response(statusCode: httpResponse.statusCode, mimeType: httpResponse.mimeType!)
+                self.response = Response(statusCode: httpResponse.statusCode, mimeType: httpResponse.mimeType!, body: String(data: data, encoding: .utf8) ?? "")
             }
             
-            print(httpResponse.mimeType)
             print(httpResponse.expectedContentLength)
-            print(httpResponse.statusCode)
-            print(String(data: data, encoding: .utf8))
         }
         
         dataTask.resume()
