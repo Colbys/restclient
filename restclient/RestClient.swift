@@ -11,7 +11,7 @@ class RestClient: ObservableObject {
     
     @Published var response: Response? = nil
     
-    func sendRequest(urlRaw: String) {
+    func sendRequest(urlRaw: String, httpMethod: HTTPMethod) {
         guard let url = URL(string: urlRaw) else {
             // TODO: display message in UI if URL is invalid
             fatalError("Invalid URL")
@@ -19,7 +19,7 @@ class RestClient: ObservableObject {
 
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Accept")
-        urlRequest.httpMethod = "GET"
+        urlRequest.httpMethod = httpMethod.rawValue
         
         let dataTask = URLSession.shared.dataTask(with: urlRequest) { (data, r, e) in
             // TODO: handle response from server and save to state

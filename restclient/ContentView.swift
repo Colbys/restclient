@@ -11,6 +11,7 @@ struct ContentView: View {
     @EnvironmentObject var restClient: RestClient
     
     @State private var url = "https://example.com"
+    @State private var httpMethod: HTTPMethod = HTTPMethod.GET
     
     var body: some View {
         NavigationSplitView {
@@ -29,9 +30,20 @@ struct ContentView: View {
         }
         .toolbar {
             ToolbarItemGroup(placement: .status) {
+                Menu("\(httpMethod.rawValue)") {
+                    ForEach(HTTPMethod.allCases) { method in
+                        Button("\(method.rawValue)") {
+                            httpMethod = method
+                        }
+                    }
+                }
+                .menuStyle(.button)
                 TextField("URL", text: $url)
                 Button("Send") {
-                    restClient.sendRequest(urlRaw: url)
+                    restClient.sendRequest(
+                        urlRaw: url,
+                        httpMethod: httpMethod
+                    )
                 }
             }
         }
