@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA364D972B8DF8C800C5D581 /* HTTPQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA364D962B8DF8C800C5D581 /* HTTPQuery.swift */; };
+		CA5BAB742B8DD66900FA63BB /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BAB732B8DD66900FA63BB /* TableView.swift */; };
+		CA5BAB762B8DD6B400FA63BB /* Togglable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BAB752B8DD6B400FA63BB /* Togglable.swift */; };
+		CA5BAB782B8DD92D00FA63BB /* TableItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5BAB772B8DD92D00FA63BB /* TableItem.swift */; };
 		CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */; };
 		CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */; };
 		CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8072B88A9D900A69084 /* restclientApp.swift */; };
@@ -19,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA364D962B8DF8C800C5D581 /* HTTPQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPQuery.swift; sourceTree = "<group>"; };
+		CA5BAB732B8DD66900FA63BB /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		CA5BAB752B8DD6B400FA63BB /* Togglable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Togglable.swift; sourceTree = "<group>"; };
+		CA5BAB772B8DD92D00FA63BB /* TableItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableItem.swift; sourceTree = "<group>"; };
 		CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		CAECE8042B88A9D900A69084 /* restclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +51,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA5BAB722B8DD64D00FA63BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAECE8182B88D20C00A69084 /* ResponseView.swift */,
+				CAECE8092B88A9D900A69084 /* ContentView.swift */,
+				CA5BAB732B8DD66900FA63BB /* TableView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		CAECE7FB2B88A9D900A69084 = {
 			isa = PBXGroup;
 			children = (
@@ -62,14 +80,13 @@
 		CAECE8062B88A9D900A69084 /* restclient */ = {
 			isa = PBXGroup;
 			children = (
+				CA5BAB722B8DD64D00FA63BB /* View */,
 				CAECE81A2B88D6B000A69084 /* Model */,
 				CAECE8072B88A9D900A69084 /* restclientApp.swift */,
-				CAECE8092B88A9D900A69084 /* ContentView.swift */,
 				CAECE80B2B88A9DA00A69084 /* Assets.xcassets */,
 				CAECE8102B88A9DA00A69084 /* restclient.entitlements */,
 				CAECE80D2B88A9DA00A69084 /* Preview Content */,
 				CAECE8162B88AD0800A69084 /* RestClient.swift */,
-				CAECE8182B88D20C00A69084 /* ResponseView.swift */,
 			);
 			path = restclient;
 			sourceTree = "<group>";
@@ -88,6 +105,9 @@
 				CAECE81B2B88D6BF00A69084 /* Response.swift */,
 				CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */,
 				CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */,
+				CA5BAB752B8DD6B400FA63BB /* Togglable.swift */,
+				CA5BAB772B8DD92D00FA63BB /* TableItem.swift */,
+				CA364D962B8DF8C800C5D581 /* HTTPQuery.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,8 +187,12 @@
 				CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */,
 				CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */,
 				CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */,
+				CA5BAB782B8DD92D00FA63BB /* TableItem.swift in Sources */,
+				CA5BAB742B8DD66900FA63BB /* TableView.swift in Sources */,
 				CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */,
 				CAECE81C2B88D6BF00A69084 /* Response.swift in Sources */,
+				CA364D972B8DF8C800C5D581 /* HTTPQuery.swift in Sources */,
+				CA5BAB762B8DD6B400FA63BB /* Togglable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
