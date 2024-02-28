@@ -23,7 +23,9 @@ struct ResponseView: View {
                         Text("\(response?.statusCode ?? 0)")
                         Text("\(response?.mimeType ?? "")")
                     }
-                    Text(response?.body ?? "")
+                    ScrollView {
+                        Text(response?.body ?? "")
+                    }
                 } else {
                     Text("No Response")
                 }

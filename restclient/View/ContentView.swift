@@ -28,41 +28,27 @@ struct ContentView: View {
                 Text("Item 2")
             }
         } detail: {
-            HStack(
-                alignment: .top
-            ) {
-                TabView {
-                    VStack() {
-                        Text("Body")
-                    }
-                    .tabItem { 
-                        Text("Body (JSON)")
-                    }
-                    HTTPHeaderTableView(content: $headers)
-                    .tabItem {
-                        Text("Headers (3)")
-                    }
-                    HTTPQueryTableView(content: $queries)
-                    .tabItem {
-                        Text("Queries (0)")
-                    }
-                    HTTPCookieTableView(content: $cookies)
-                    .tabItem {
-                        Text("Cookies (0)")
-                    }
-                }
-                .padding(.top)
-                .frame(minWidth: 450)
+            HStack {
+                RequestConfigurationView(
+                    headers: $headers,
+                    queries: $queries,
+                    cookies: $cookies
+                )
+                    .frame(minWidth: 450)
                 ResponseView(response: restClient.response)
                     .frame(minWidth: 400)
             }
+            
         }
         .toolbar {
             ToolbarItemGroup(placement: .status) {
                 Menu("\(httpMethod.rawValue)") {
                     ForEach(HTTPMethod.allCases) { method in
-                        Button("\(method.rawValue)") {
+                        Button(action: {
                             httpMethod = method
+                        }) {
+                            Text("\(method.rawValue)")
+                                .foregroundStyle(getColor(method))
                         }
                     }
                 }
@@ -82,6 +68,23 @@ struct ContentView: View {
         }
         .navigationTitle("")
 
+    }
+}
+
+func getColor(_ httpMethod: HTTPMethod) -> Color {
+    switch httpMethod {
+    case .GET:
+        return Color.blue
+    case .POST:
+        return Color.green
+    case .PUT:
+        return Color.orange
+    case .PATCH:
+        return Color.yellow
+    case .DELETE:
+        return Color.red
+    default:
+        return Color.black
     }
 }
 

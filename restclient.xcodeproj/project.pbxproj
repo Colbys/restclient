@@ -16,6 +16,7 @@
 		CA6A8D122B8F290500A88102 /* HTTPCookieTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6A8D112B8F290500A88102 /* HTTPCookieTableView.swift */; };
 		CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */; };
 		CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */; };
+		CA986C9E2B8F770D00B46240 /* RequestConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA986C9D2B8F770D00B46240 /* RequestConfigurationView.swift */; };
 		CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8072B88A9D900A69084 /* restclientApp.swift */; };
 		CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8092B88A9D900A69084 /* ContentView.swift */; };
 		CAECE80C2B88A9DA00A69084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80B2B88A9DA00A69084 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 		CA6A8D112B8F290500A88102 /* HTTPCookieTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPCookieTableView.swift; sourceTree = "<group>"; };
 		CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		CA986C9D2B8F770D00B46240 /* RequestConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfigurationView.swift; sourceTree = "<group>"; };
 		CAECE8042B88A9D900A69084 /* restclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAECE8072B88A9D900A69084 /* restclientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restclientApp.swift; sourceTree = "<group>"; };
 		CAECE8092B88A9D900A69084 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				CA6A8D072B8F259A00A88102 /* Table */,
 				CAECE8182B88D20C00A69084 /* ResponseView.swift */,
 				CAECE8092B88A9D900A69084 /* ContentView.swift */,
+				CA986C9D2B8F770D00B46240 /* RequestConfigurationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */,
 				CA6A8D122B8F290500A88102 /* HTTPCookieTableView.swift in Sources */,
 				CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */,
+				CA986C9E2B8F770D00B46240 /* RequestConfigurationView.swift in Sources */,
 				CA6A8D0E2B8F27A400A88102 /* HTTPQueryTableView.swift in Sources */,
 				CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */,
 				CA6A8D102B8F28A700A88102 /* HTTPCookie.swift in Sources */,
