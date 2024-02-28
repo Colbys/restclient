@@ -77,6 +77,14 @@
 			path = Table;
 			sourceTree = "<group>";
 		};
+		CA6A8D132B8F2BA800A88102 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CAECE8162B88AD0800A69084 /* RestClient.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		CAECE7FB2B88A9D900A69084 = {
 			isa = PBXGroup;
 			children = (
@@ -96,13 +104,13 @@
 		CAECE8062B88A9D900A69084 /* restclient */ = {
 			isa = PBXGroup;
 			children = (
+				CA6A8D132B8F2BA800A88102 /* Service */,
 				CA5BAB722B8DD64D00FA63BB /* View */,
 				CAECE81A2B88D6B000A69084 /* Model */,
 				CAECE8072B88A9D900A69084 /* restclientApp.swift */,
 				CAECE80B2B88A9DA00A69084 /* Assets.xcassets */,
 				CAECE8102B88A9DA00A69084 /* restclient.entitlements */,
 				CAECE80D2B88A9DA00A69084 /* Preview Content */,
-				CAECE8162B88AD0800A69084 /* RestClient.swift */,
 			);
 			path = restclient;
 			sourceTree = "<group>";

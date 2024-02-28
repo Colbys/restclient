@@ -70,8 +70,11 @@ struct ContentView: View {
                 TextField("URL", text: $url)
                 Button("Send") {
                     restClient.sendRequest(
-                        urlRaw: url,
-                        httpMethod: httpMethod
+                        url,
+                        httpMethod: httpMethod,
+                        headers: headers,
+                        queries: queries,
+                        cookies: cookies
                     )
                 }
                 .buttonStyle(.borderless)
