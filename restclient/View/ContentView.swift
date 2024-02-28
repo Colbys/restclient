@@ -15,20 +15,12 @@ struct ContentView: View {
     @State private var headers: [HTTPHeader] = [
         HTTPHeader(name: "Content-Type", value: "application/json", toggled: true)
     ]
-    @State private var queries: [HTTPQuery] = []
-
-    func enabledBinding(header: HTTPHeader) -> Binding<Bool> {
-        return Binding<Bool>(
-            get: {
-                return header.toggled
-            },
-            set: { isEnabled in
-                if let index = headers.firstIndex(where: { $0.id == header.id }) {
-                    headers[index].toggled = isEnabled
-                }
-            }
-        )
-    }
+    @State private var queries: [HTTPQuery] = [
+        HTTPQuery(name: "query", value: "sample", toggled: true)
+    ]
+    @State private var cookies: [HTTPCookie] = [
+        HTTPCookie(name: "cookie", value: "yes", toggled: true)
+    ]
     
     var body: some View {
         NavigationSplitView {
@@ -46,31 +38,23 @@ struct ContentView: View {
                     .tabItem { 
                         Text("Body (JSON)")
                     }
-                    Table(headers) {
-                        TableColumn("Name", value: \.name)
-                        TableColumn("Value", value: \.value)
-                        TableColumn("Enabled") { header in
-                            Toggle("", isOn: enabledBinding(header: header))
-                        }
-                    }
+                    HTTPHeaderTableView(content: $headers)
                     .tabItem {
                         Text("Headers (3)")
                     }
-                    VStack() {
-                        TableView(list: $queries)
-                    }
+                    HTTPQueryTableView(content: $queries)
                     .tabItem {
                         Text("Queries (0)")
                     }
-                    VStack() {
-                        Text("Cookies")
-                    }
+                    HTTPCookieTableView(content: $cookies)
                     .tabItem {
                         Text("Cookies (0)")
                     }
                 }
                 .padding(.top)
+                .frame(minWidth: 450)
                 ResponseView(response: restClient.response)
+                    .frame(minWidth: 400)
             }
         }
         .toolbar {
