@@ -17,11 +17,17 @@ struct ResponseView: View {
         ) {
             VStack {
                 if (response != nil) {
-                    HStack(
-                        spacing: 30
-                    ) {
-                        Text("\(response?.statusCode ?? 0)")
-                        Text("\(response?.mimeType ?? "")")
+                    HStack {
+                        Badge {
+                            Text("\(response?.statusCode ?? 0)")
+                                .bold()
+                                .foregroundStyle(.white)
+                        }
+                        Badge {
+                            Text("\(response?.mimeType ?? "")")
+                                .bold()
+                                .foregroundStyle(.white)
+                        }
                     }
                     ScrollView {
                         Text(response?.body ?? "")

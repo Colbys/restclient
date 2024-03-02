@@ -17,6 +17,7 @@
 		CA97A5C42B8CBBC3005D6C04 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */; };
 		CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */; };
 		CA986C9E2B8F770D00B46240 /* RequestConfigurationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA986C9D2B8F770D00B46240 /* RequestConfigurationView.swift */; };
+		CAEBB6F92B934C97008AD13E /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAEBB6F82B934C97008AD13E /* Badge.swift */; };
 		CAECE8082B88A9D900A69084 /* restclientApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8072B88A9D900A69084 /* restclientApp.swift */; };
 		CAECE80A2B88A9D900A69084 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAECE8092B88A9D900A69084 /* ContentView.swift */; };
 		CAECE80C2B88A9DA00A69084 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAECE80B2B88A9DA00A69084 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 		CA97A5C32B8CBBC3005D6C04 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		CA97A5C52B8CBF2C005D6C04 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		CA986C9D2B8F770D00B46240 /* RequestConfigurationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestConfigurationView.swift; sourceTree = "<group>"; };
+		CAEBB6F82B934C97008AD13E /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		CAECE8042B88A9D900A69084 /* restclient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restclient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAECE8072B88A9D900A69084 /* restclientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restclientApp.swift; sourceTree = "<group>"; };
 		CAECE8092B88A9D900A69084 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		CAEBB6F72B934C89008AD13E /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				CAEBB6F82B934C97008AD13E /* Badge.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		CAECE7FB2B88A9D900A69084 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		CAECE8062B88A9D900A69084 /* restclient */ = {
 			isa = PBXGroup;
 			children = (
+				CAEBB6F72B934C89008AD13E /* Component */,
 				CA6A8D132B8F2BA800A88102 /* Service */,
 				CA5BAB722B8DD64D00FA63BB /* View */,
 				CAECE81A2B88D6B000A69084 /* Model */,
@@ -219,6 +230,7 @@
 				CA986C9E2B8F770D00B46240 /* RequestConfigurationView.swift in Sources */,
 				CA6A8D0E2B8F27A400A88102 /* HTTPQueryTableView.swift in Sources */,
 				CAECE8192B88D20C00A69084 /* ResponseView.swift in Sources */,
+				CAEBB6F92B934C97008AD13E /* Badge.swift in Sources */,
 				CA6A8D102B8F28A700A88102 /* HTTPCookie.swift in Sources */,
 				CA5BAB782B8DD92D00FA63BB /* TableItem.swift in Sources */,
 				CA97A5C62B8CBF2C005D6C04 /* HTTPHeader.swift in Sources */,

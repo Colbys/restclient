@@ -18,9 +18,6 @@ struct ContentView: View {
     @State private var queries: [HTTPQuery] = [
         HTTPQuery(name: "query", value: "sample", toggled: true)
     ]
-    @State private var cookies: [HTTPCookie] = [
-        HTTPCookie(name: "cookie", value: "yes", toggled: true)
-    ]
     
     var body: some View {
         NavigationSplitView {
@@ -31,8 +28,7 @@ struct ContentView: View {
             HStack {
                 RequestConfigurationView(
                     headers: $headers,
-                    queries: $queries,
-                    cookies: $cookies
+                    queries: $queries
                 )
                     .frame(minWidth: 450)
                 ResponseView(response: restClient.response)
@@ -54,13 +50,14 @@ struct ContentView: View {
                 }
                 .menuStyle(.borderlessButton)
                 TextField("URL", text: $url)
+                    .frame(width: 350)
+                    .multilineTextAlignment(.center)
                 Button("Send") {
                     restClient.sendRequest(
                         url,
                         httpMethod: httpMethod,
                         headers: headers,
-                        queries: queries,
-                        cookies: cookies
+                        queries: queries
                     )
                 }
                 .buttonStyle(.borderless)

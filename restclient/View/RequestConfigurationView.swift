@@ -10,7 +10,6 @@ import SwiftUI
 struct RequestConfigurationView: View {
     @Binding var headers: [HTTPHeader]
     @Binding var queries: [HTTPQuery]
-    @Binding var cookies: [HTTPCookie]
     
     var body: some View {
         TabView {
@@ -34,10 +33,6 @@ struct RequestConfigurationView: View {
             .tabItem {
                 Text("Queries (0)")
             }
-            HTTPCookieTableView(content: $cookies)
-            .tabItem {
-                Text("Cookies (0)")
-            }
         }
         .padding(.top)
     }
@@ -46,7 +41,6 @@ struct RequestConfigurationView: View {
 #Preview {
     @State var headers: [HTTPHeader] = []
     @State var queries: [HTTPQuery] = []
-    @State var cookies: [HTTPCookie] = []
     
-    return RequestConfigurationView(headers: $headers, queries: $queries, cookies: $cookies)
+    return RequestConfigurationView(headers: $headers, queries: $queries)
 }

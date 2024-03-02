@@ -15,8 +15,7 @@ class RestClient: ObservableObject {
         _ url: String,
         httpMethod: HTTPMethod,
         headers: [HTTPHeader],
-        queries: [HTTPQuery],
-        cookies: [HTTPCookie]
+        queries: [HTTPQuery]
     ) {
         var urlComponents = URLComponents(string: url)
         urlComponents?.queryItems = queries.map { query in
