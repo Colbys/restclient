@@ -6,15 +6,30 @@
 //
 
 import SwiftUI
+import CodeEditorView
+import LanguageSupport
 
 struct RequestConfigurationView: View {
     @Binding var headers: [HTTPHeader]
     @Binding var queries: [HTTPQuery]
+    @Binding var requestBody: String
+    
+    @State private var position: CodeEditor.Position = CodeEditor.Position()
+    @State private var messages: Set<TextLocated<Message>> = Set()
+    
+    @Environment(\.colorScheme) private var colorScheme: ColorScheme
     
     var body: some View {
         TabView {
             VStack() {
-                Text("Body")
+                CodeEditor(
+                    text: $requestBody,
+                    position: $position,
+                    messages: $messages,
+                    layout: .init(showMinimap: false, wrapText: true)
+                )
+                .environment(\.codeEditorTheme,
+                                   colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight)
             }
             .tabItem {
                 Text("Body (JSON)")
@@ -41,6 +56,11 @@ struct RequestConfigurationView: View {
 #Preview {
     @State var headers: [HTTPHeader] = []
     @State var queries: [HTTPQuery] = []
+    @State var requestBody: String = ""
     
-    return RequestConfigurationView(headers: $headers, queries: $queries)
+    return RequestConfigurationView(
+        headers: $headers,
+        queries: $queries,
+        requestBody: $requestBody
+    )
 }

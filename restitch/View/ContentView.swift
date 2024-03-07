@@ -18,6 +18,7 @@ struct ContentView: View {
     @State private var queries: [HTTPQuery] = [
         HTTPQuery(name: "query", value: "sample", toggled: true)
     ]
+    @State private var requestBody: String = ""
     
     var body: some View {
         NavigationSplitView {
@@ -28,7 +29,8 @@ struct ContentView: View {
             HStack {
                 RequestConfigurationView(
                     headers: $headers,
-                    queries: $queries
+                    queries: $queries,
+                    requestBody: $requestBody
                 )
                     .frame(minWidth: 450)
                 ResponseView(response: restClient.response)
