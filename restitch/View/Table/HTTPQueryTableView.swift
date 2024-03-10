@@ -53,6 +53,11 @@ struct HTTPQueryTableView: View {
                         }
                 }
             }
+            .contextMenu(forSelectionType: HTTPQuery.ID.self) { items  in
+                //
+            } primaryAction: { items in
+                print("I pressed!")
+            }
             // TODO: look up if there's more appropriate button for adding new entries
             Button("+") {
                 add(HTTPQuery(name: "Query", value: "Value", toggled: true))
