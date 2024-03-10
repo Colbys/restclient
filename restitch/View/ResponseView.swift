@@ -15,30 +15,33 @@ struct ResponseView: View {
         VStack(
             alignment: .leading
         ) {
-            VStack {
+            VStack(alignment: .trailing) {
                 if (response != nil) {
                     HStack {
                         Badge {
-                            Text("\(response?.statusCode ?? 0)")
+                            Text("\(response!.statusCode)")
                                 .bold()
                                 .foregroundStyle(.white)
                         }
                         Badge {
-                            Text("\(response?.mimeType ?? "")")
+                            Text("\(response!.mimeType)")
                                 .bold()
                                 .foregroundStyle(.white)
                         }
                     }
-                    ScrollView {
-                        Text(response?.body ?? "")
-                    }
+                    .padding([.trailing])
+                    SourceCodeEditor(
+                        requestBody: wrapSourceCode(
+                            sourceCode: response!.body
+                        )
+                    )
                 } else {
                     Text("No Response")
                 }
                 
             }
         }
-        .padding()
+        .padding([.top])
         .frame(minWidth: 100, maxWidth: .infinity)
     }
 }

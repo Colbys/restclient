@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA5C5C532B9DD36700142E06 /* SourceCodeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5C5C522B9DD36700142E06 /* SourceCodeEditor.swift */; };
 		CACF39872B99AEC900858927 /* RestitchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF396E2B99AEC900858927 /* RestitchApp.swift */; };
 		CACF39882B99AEC900858927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CACF396F2B99AEC900858927 /* Assets.xcassets */; };
 		CACF39892B99AEC900858927 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = CACF39712B99AEC900858927 /* Badge.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA5C5C522B9DD36700142E06 /* SourceCodeEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceCodeEditor.swift; sourceTree = "<group>"; };
 		CACF396E2B99AEC900858927 /* RestitchApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestitchApp.swift; sourceTree = "<group>"; };
 		CACF396F2B99AEC900858927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CACF39712B99AEC900858927 /* Badge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				CACF39712B99AEC900858927 /* Badge.swift */,
+				CA5C5C522B9DD36700142E06 /* SourceCodeEditor.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				CACF39982B99AEC900858927 /* RestClient.swift in Sources */,
 				CACF39952B99AEC900858927 /* RequestConfigurationView.swift in Sources */,
 				CACF398F2B99AEC900858927 /* HTTPCookie.swift in Sources */,
+				CA5C5C532B9DD36700142E06 /* SourceCodeEditor.swift in Sources */,
 				CACF39972B99AEC900858927 /* ContentView.swift in Sources */,
 				CACF39892B99AEC900858927 /* Badge.swift in Sources */,
 				CACF39942B99AEC900858927 /* HTTPHeaderTableView.swift in Sources */,

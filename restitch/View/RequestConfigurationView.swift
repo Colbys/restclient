@@ -14,22 +14,10 @@ struct RequestConfigurationView: View {
     @Binding var queries: [HTTPQuery]
     @Binding var requestBody: String
     
-    @State private var position: CodeEditor.Position = CodeEditor.Position()
-    @State private var messages: Set<TextLocated<Message>> = Set()
-    
-    @Environment(\.colorScheme) private var colorScheme: ColorScheme
-    
     var body: some View {
         TabView {
             VStack() {
-                CodeEditor(
-                    text: $requestBody,
-                    position: $position,
-                    messages: $messages,
-                    layout: .init(showMinimap: false, wrapText: true)
-                )
-                .environment(\.codeEditorTheme,
-                                   colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight)
+                SourceCodeEditor(requestBody: $requestBody)
             }
             .tabItem {
                 Text("Body (JSON)")
