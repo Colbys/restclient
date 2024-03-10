@@ -7,5 +7,5 @@
 
 import Foundation
 
-protocol TableItem: Identifiable, Toggable {
+protocol TableItem: Identifiable, Equatable, Toggable {
 }

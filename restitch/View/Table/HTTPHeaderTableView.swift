@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HTTPHeaderTableView: View {
     @Binding var content: [HTTPHeader]
+    @State private var selection: Set<HTTPHeader.ID> = []
     
     func enabledBinding(header: HTTPHeader) -> Binding<Bool> {
         return Binding<Bool>(
@@ -24,7 +25,7 @@ struct HTTPHeaderTableView: View {
     }
     
     var body: some View {
-        Table(content) {
+        Table(content, selection: $selection) {
             TableColumn("Name", value: \.name)
             TableColumn("Value", value: \.value)
             TableColumn("Enabled") { header in
